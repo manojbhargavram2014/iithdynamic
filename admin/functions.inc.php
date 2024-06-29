@@ -220,14 +220,14 @@ curl_setopt_array($curl, array(
 
 
 function isAdmin(){
-	if(!isset($_SESSION['ADMIN_LOGIN'])){
+	if(!isset($_SESSION['IITH_ADMIN_LOGIN'])){
 	?>
 		<script>
 		window.location.href='login.php';
 		</script>
 		<?php
 	}
-	if($_SESSION['ADMIN_ROLE']==1){
+	if($_SESSION['IITH_ADMIN_ROLE']==1){
 		?>
 		<script>
 		window.location.href='product.php';

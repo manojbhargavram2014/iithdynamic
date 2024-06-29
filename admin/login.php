@@ -13,10 +13,10 @@ if(isset($_POST['submit'])){
 		if($row['status']=='0'){
 			$msg="Account deactivated";	
 		}else{
-			$_SESSION['ADMIN_LOGIN']='yes';
-			$_SESSION['ADMIN_ID']=$row['id'];
-			$_SESSION['ADMIN_USERNAME']=$username;
-			$_SESSION['ADMIN_ROLE']=$row['role'];
+			$_SESSION['IITH_ADMIN_LOGIN']='yes';
+			$_SESSION['IITH_ADMIN_ID']=$row['id'];
+			$_SESSION['IITH_ADMIN_USERNAME']=$username;
+			$_SESSION['IITH_ADMIN_ROLE']=$row['role'];
 			header('location:index.php');
 			die();
 		}

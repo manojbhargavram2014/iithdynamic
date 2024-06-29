@@ -1,7 +1,7 @@
 <?php
 require('connection.inc.php');
 require('functions.inc.php');
-if(isset($_SESSION['ADMIN_LOGIN']) && $_SESSION['ADMIN_LOGIN']!=''){
+if(isset($_SESSION['IITH_ADMIN_LOGIN']) && $_SESSION['IITH_ADMIN_LOGIN']!=''){
 
 }else{
 	header('location:login.php');
@@ -33,9 +33,12 @@ if(isset($_SESSION['ADMIN_LOGIN']) && $_SESSION['ADMIN_LOGIN']!=''){
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                <ul class="nav navbar-nav">
                   <li class="menu-title">Menu</li>
-				  <?php if($_SESSION['ADMIN_ROLE']!=1){?>
+				  <?php if($_SESSION['IITH_ADMIN_ROLE']!=1){?>
 				  <li class="menu-item-has-children dropdown">
-                     <a href="events.php" > Banner</a>
+                     <a href="events.php" > Events</a>
+                  </li>
+                  <li class="menu-item-has-children dropdown">
+                     <a href="people.php" > People</a>
                   </li>
 				   
 				  <?php } ?>
@@ -55,7 +58,7 @@ if(isset($_SESSION['ADMIN_LOGIN']) && $_SESSION['ADMIN_LOGIN']!=''){
             <div class="top-right">
                <div class="header-menu">
                   <div class="user-area dropdown float-right">
-                     <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome <?php echo $_SESSION['ADMIN_USERNAME']?></a>
+                     <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome <?php echo $_SESSION['IITH_ADMIN_USERNAME']?></a>
                      <div class="user-menu dropdown-menu">
                         <a class="nav-link" href="logout.php"><i class="fa fa-power-off"></i>Logout</a>
                      </div>
