@@ -3,6 +3,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <?php include "header.php" ?>
+<?php include "./connection.inc.php" ?>
 <div class="kingster-page-wrapper" id="kingster-page-wrapper">
 <div class="gdlr-core-page-builder-body">
 <div class="gdlr-core-pbf-wrapper " style="padding: 0px 0px 0px 0px;">
@@ -11,17 +12,13 @@
       <!--<marquee behavior="scroll" direction="left" scrollamount="5" style="color:white"><span style="color:firebrick;"><strong>Latest News  -> </strong></span>
          <strong>21-03-2024 :</strong> Talk by Prof. Irina Pettersson,  Head of  Applied Mathematics and Statistics, MV Chalmers, Sweden. on Multiscale methods with applications in electrophysiology  <span style="color:red">|| </span><strong>20-03-2024 :</strong> PhD Viva Voce Examination of Mr Satyabrat Sahoo [MA18RESCH11004] on asymptotic solutions of certain Diophantine equations, Heights of rational points, and Inner twists.
          </marquee>-->
-      
-         <!--<div class="latest-news-container" style="text-align: center;">
-         
+      <!--<div class="latest-news-container" style="text-align: center;">
          <div class="latest-news-heading card-header" style="color: ghostwhite; font-weight: bold;">Latest News</div>
          
          <div class="scrolling-text card-body" style="color: whitesmoke; display: inline-block;">
              <a href=""><marquee behavior="scroll" direction="left" scrollamount="5" style="color:white"><span style="color:firebrick;"><strong>A Symposium on Algebra and Number theory on National Mathematics Day</strong></a> <img src="upload/gif1.png" alt="Latest News" width="20" height="20"> <span style="color: whitesmoke;"></span></marquee>
          </div>
          </div>-->
-
-         
       <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-pbf-wrapper-full-no-space">
          <div class="gdlr-core-pbf-element">
             <div class="gdlr-core-revolution-slider-item gdlr-core-item-pdlr gdlr-core-item-pdb " style="padding-bottom: 0px ;">
@@ -118,50 +115,50 @@
       </div>
    </div>
 </div>
- <div class="gdlr-core-pbf-wrapper "  id="gdlr-core-wrapper-2">
-                        <div class="gdlr-core-pbf-background-wrap">
-                            <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" id="div_1dd7_13" data-parallax-speed="0.8"></div>
+<div class="gdlr-core-pbf-wrapper "  id="gdlr-core-wrapper-2">
+   <div class="gdlr-core-pbf-background-wrap">
+      <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" id="div_1dd7_13" data-parallax-speed="0.8"></div>
+   </div>
+   <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
+      <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container-custom">
+         <div class="gdlr-core-pbf-column gdlr-core-column-30 gdlr-core-column-first">
+            <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " id="div_1dd7_14" data-sync-height="height-1">
+               <div class="gdlr-core-pbf-background-wrap">
+                  <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" id="div_1dd7_15" data-parallax-speed="0"></div>
+               </div>
+               <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content"></div>
+            </div>
+         </div>
+         <div class="gdlr-core-pbf-column gdlr-core-column-30" id="gdlr-core-column-4">
+            <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " id="div_1dd7_16" data-sync-height="height-1">
+               <div class="gdlr-core-pbf-background-wrap">
+                  <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" id="div_1dd7_17" data-parallax-speed="0.1"></div>
+               </div>
+               <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
+                  <div class="gdlr-core-pbf-element">
+                     <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr" id="div_1dd7_18">
+                        <div class="gdlr-core-title-item-title-wrap clearfix">
+                           <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " id="h3_1dd7_4">Admissions</h3>
                         </div>
-                        <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                            <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container-custom">
-                                <div class="gdlr-core-pbf-column gdlr-core-column-30 gdlr-core-column-first">
-                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " id="div_1dd7_14" data-sync-height="height-1">
-                                        <div class="gdlr-core-pbf-background-wrap">
-                                            <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" id="div_1dd7_15" data-parallax-speed="0"></div>
-                                        </div>
-                                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content"></div>
-                                    </div>
-                                </div>
-                                <div class="gdlr-core-pbf-column gdlr-core-column-30" id="gdlr-core-column-4">
-                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " id="div_1dd7_16" data-sync-height="height-1">
-                                        <div class="gdlr-core-pbf-background-wrap">
-                                            <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" id="div_1dd7_17" data-parallax-speed="0.1"></div>
-                                        </div>
-                                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr" id="div_1dd7_18">
-                                                    <div class="gdlr-core-title-item-title-wrap clearfix">
-                                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " id="h3_1dd7_4">Admissions</h3></div><span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption" id="span_1dd7_0">The department admits doctoral students twice a year - May-June / December of every year.</span></div>
-                                            </div>
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" id="div_1dd7_19">
-                                                    <div class="gdlr-core-text-box-item-content" id="div_1dd7_20">
-                                                        <p>The notification for the same and the application procedure can be found here:</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"><a class="gdlr-core-button  gdlr-core-button-solid gdlr-core-button-no-border" href="https://www.iith.ac.in/phdadmissions/" id="a_1dd7_0"><span class="gdlr-core-content" >IITH PhD Admissions</span></a></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption" id="span_1dd7_0">The department admits doctoral students twice a year - May-June / December of every year.</span>
+                     </div>
+                  </div>
+                  <div class="gdlr-core-pbf-element">
+                     <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" id="div_1dd7_19">
+                        <div class="gdlr-core-text-box-item-content" id="div_1dd7_20">
+                           <p>The notification for the same and the application procedure can be found here:</p>
                         </div>
-                    </div>
-
-
-
+                     </div>
+                  </div>
+                  <div class="gdlr-core-pbf-element">
+                     <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"><a class="gdlr-core-button  gdlr-core-button-solid gdlr-core-button-no-border" href="https://www.iith.ac.in/phdadmissions/" id="a_1dd7_0"><span class="gdlr-core-content" >IITH PhD Admissions</span></a></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
 <div class="gdlr-core-pbf-wrapper " id="div_1dd7_30" data-skin="Column Service">
    <div class="gdlr-core-pbf-background-wrap" id="div_1dd7_31"></div>
    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
@@ -268,27 +265,34 @@
                   <div class="gdlr-core-blog-item-holder gdlr-core-js-2 clearfix" data-layout="fitrows">
                      <div class="gdlr-core-item-list-wrap gdlr-core-column-30">
                         <div class="gdlr-core-item-list-inner gdlr-core-item-mglr">
+                        <?php 
+							
+                                       $sql="select * from events where category = 'seminars'  order by id desc LIMIT 1";
+                                       $res=mysqli_query($con,$sql);
+                                          while($row=mysqli_fetch_assoc($res)){?>
                            <div class="gdlr-core-blog-grid ">
                               <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
-                                 <a href="#">
-                                 <img src="upload/workshop3.jpg" width="700" height="430" alt="" class="img-fluid img-thumbnail" />
+                                 <a  href="<?php echo 'event_detail.php?id=' . $row['id']; ?>">
+                                 <img src="./admin/uploads/<?php echo $row['image']?>" width="700" height="430" alt="" class="img-fluid img-thumbnail" />
                                  </a>
                               </div>
+              
                               <div class="gdlr-core-blog-grid-content-wrap">
                                  <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
                                     <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date">
-                                    Feb 21st, 2024
+                                    <?php echo $row['date'] ?>
                                     </span>
                                     <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-tag">
-                                    <a href="seminars_2024.php" rel="tag" style="color:red;">Seminar</a>
+                                    <a  href="<?php echo 'event_detail.php?id=' . $row['id']; ?>" rel="tag" style="color:red;">Seminar</a>
                                     <span class="gdlr-core-sep">,</span>
-                                    Prof. Irina Pettersson,  Head of  Applied Mathematics and Statistics, MV Chalmers, Sweden.
+                                    <?php echo $row['speaker'] ?>
                                     </span>
                                  </div>
                                  <h3 class="gdlr-core-blog-title gdlr-core-skin-title" id="h3_1dd7_11">
-                                    <a href="seminars_2024.php" >Multiscale methods with applications in electrophysiology</a>
+                                    <a  href="<?php echo 'event_detail.php?id=' . $row['id']; ?>" ><?php echo $row['title'] ?></a>
                                  </h3>
                               </div>
+                              <?php }?>
                            </div>
                         </div>
                      </div>
@@ -488,39 +492,36 @@
                         .gdlr-core-event-item-thumbnail img {
                         height: 200px;
                         }
+                        .events-container {
+                        display: flex;
+                        flex-wrap: nowrap;
+                        gap: 20px;
+                        }
+                        .gdlr-core-event-item-list {
+                        flex: 1 1 30%; 
+                        box-sizing: border-box;
+                        }
                      </style>
-                     <div class="gdlr-core-event-item-list gdlr-core-style-grid gdlr-core-item-pdlr gdlr-core-column-20 gdlr-core-column-first  clearfix">
-                        <div class="gdlr-core-event-item-thumbnail">
-                           <a href="#"><img src="outreach_events/NMD2023_1.jpg" width="900" height="500"  alt="" class="img-fluid img-thumbnail" /></a>
-                        </div>
-                        <span class="gdlr-core-event-item-info gdlr-core-type-start-date-month"><span class="gdlr-core-date" >07</span><span class="gdlr-core-month">Jan</span></span>
-                        <div class="gdlr-core-event-item-content-wrap">
-                           <h3 class="gdlr-core-event-item-title"><a href="outreach_events.php" >National Mathematics Day 2023</a></h3>
-                           <div class="gdlr-core-event-item-info-wrap"><span class="gdlr-core-event-item-info gdlr-core-type-time"><span class="gdlr-core-head" ><i class="icon_clock_alt" ></i></span><span class="gdlr-core-tail">7:00 am - 11:30 pm</span></span><span class="gdlr-core-event-item-info gdlr-core-type-location"><span class="gdlr-core-head" ><i class="icon_pin_alt" ></i></span><span class="gdlr-core-tail">IIT Hyderabad</span></span>
+                     <div class="events-container">
+                        <?php 
+                           $sql="select * from events order by id desc LIMIT 3";
+                           $res=mysqli_query($con,$sql);
+                           $i=1;
+                           while($row=mysqli_fetch_assoc($res)){
+                           ?>
+                        <div class="gdlr-core-event-item-list gdlr-core-style-grid gdlr-core-item-pdlr gdlr-core-column-20 gdlr-core-column-first clearfix">
+                           <div class="gdlr-core-event-item-thumbnail">
+                              <a  href="<?php echo 'event_detail.php?id=' . $row['id']; ?>"><img src="outreach_events/NMD2023_1.jpg" width="900" height="500" alt="" class="img-fluid img-thumbnail" /></a>
+                           </div>
+                           <div class="gdlr-core-event-item-content-wrap">
+                              <h3 class="gdlr-core-event-item-title"><a  href="<?php echo 'event_detail.php?id=' . $row['id']; ?>"><?php echo $row['title'] ?></a></h3>
+                              <div class="gdlr-core-event-item-info-wrap">
+                                 <span class="gdlr-core-event-item-info gdlr-core-type-time"><span class="gdlr-core-head"><i class="icon_clock_alt"></i></span><span class="gdlr-core-tail"><?php echo $row['date'] ?></span></span>
+                                 <span class="gdlr-core-event-item-info gdlr-core-type-location"><span class="gdlr-core-head"><i class="icon_pin_alt"></i></span><span class="gdlr-core-tail"><?php echo $row['venue'] ?></span></span>
+                              </div>
                            </div>
                         </div>
-                     </div>
-                     <div class="gdlr-core-event-item-list gdlr-core-style-grid gdlr-core-item-pdlr gdlr-core-column-20  clearfix">
-                        <div class="gdlr-core-event-item-thumbnail">
-                           <a href="#"><img src="outreach_events/2023dec_1.jpg" width="900" height="500" alt="" class="img-fluid img-thumbnail" /></a>
-                        </div>
-                        <span class="gdlr-core-event-item-info gdlr-core-type-start-date-month"><span class="gdlr-core-date" >17</span><span class="gdlr-core-month">Dec</span></span>
-                        <div class="gdlr-core-event-item-content-wrap">
-                           <h3 class="gdlr-core-event-item-title"><a href="outreach_events.php" >Mathematical Science Outreach Program,2023</a></h3>
-                           <div class="gdlr-core-event-item-info-wrap"><span class="gdlr-core-event-item-info gdlr-core-type-time"><span class="gdlr-core-head" ><i class="icon_clock_alt" ></i></span><span class="gdlr-core-tail">10:00 am - 4:30 pm</span></span><span class="gdlr-core-event-item-info gdlr-core-type-location"><span class="gdlr-core-head" ><i class="icon_pin_alt" ></i></span><span class="gdlr-core-tail">IIT Hyderabad</span></span>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="gdlr-core-event-item-list gdlr-core-style-grid gdlr-core-item-pdlr gdlr-core-column-20  clearfix">
-                        <div class="gdlr-core-event-item-thumbnail">
-                           <a href="#"><img src="outreach_events/NMD3.jpg" width="900" height="500" alt="" class="img-fluid img-thumbnail" /></a>
-                        </div>
-                        <span class="gdlr-core-event-item-info gdlr-core-type-start-date-month"><span class="gdlr-core-date" >22</span><span class="gdlr-core-month">Dec</span></span>
-                        <div class="gdlr-core-event-item-content-wrap">
-                           <h3 class="gdlr-core-event-item-title"><a href="outreach_events.php" >National Mathematics Day 2022</a></h3>
-                           <div class="gdlr-core-event-item-info-wrap"><span class="gdlr-core-event-item-info gdlr-core-type-time"><span class="gdlr-core-head" ><i class="icon_clock_alt" ></i></span><span class="gdlr-core-tail">1:00 pm - 5:00 pm</span></span><span class="gdlr-core-event-item-info gdlr-core-type-location"><span class="gdlr-core-head" ><i class="icon_pin_alt" ></i></span><span class="gdlr-core-tail">IIT Hyderabad</span></span>
-                           </div>
-                        </div>
+                        <?php } ?>
                      </div>
                   </div>
                </div>
