@@ -56,7 +56,7 @@
                                     </ul>
                                 </li>
                               
-                            <li class="menu-item menu-item-has-children"><a href="#">Research</a>
+                                <li class="menu-item menu-item-has-children"><a href="#">Research</a>
                                     <ul class="sub-menu">
                                         <li class="menu-item"><a href="coming-soon.php">Areas of Reserch Intrests</a></li>
                                         <li class="menu-item"><a href="publications.php">Publciations</a></li>
@@ -75,9 +75,8 @@
                                 </li>
                                  <li class="menu-item menu-item-has-children"><a href="#">News & Events</a>
                                     <ul class="sub-menu">
-                                        
                                         <li class="menu-item"><a href="seminars_2024.php">Seminars</a></li>
-                                        <li class="menu-item"><a href="talksandworkshops">Talks & Workshops</a></li>
+                                        <li class="menu-item"><a href="talksandworkshops.php">Talks & Workshops</a></li>
                                         <li class="menu-item"><a href="outreach_events.php">Outreach Events</a></li>
                                     </ul>
                                 </li>
@@ -182,7 +181,7 @@
                                             <ul class="sub-menu">
                                                 
                                                 <li class="menu-item"><a href="seminars_2024.php">Seminars</a></li>
-                                                <li class="menu-item"><a href="#">Talks & Workshops</a></li>
+                                                <li class="menu-item"><a href="talksandworkshops.php">Talks & Workshops</a></li>
                                                 <li class="menu-item"><a href="outreach_events.php">Outreach Events</a></li>
                                             </ul>
                                         </li>
