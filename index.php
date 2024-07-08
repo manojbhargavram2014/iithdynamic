@@ -267,7 +267,7 @@
                         <div class="gdlr-core-item-list-inner gdlr-core-item-mglr">
                         <?php 
 							
-                                       $sql="select * from events where category = 'seminars'  order by id desc LIMIT 1";
+                                       $sql="select * from events where category = 'seminars' and status='1'  order by id desc LIMIT 1";
                                        $res=mysqli_query($con,$sql);
                                           while($row=mysqli_fetch_assoc($res)){?>
                            <div class="gdlr-core-blog-grid ">
@@ -488,42 +488,52 @@
                      <a class="gdlr-core-block-item-read-more" href="outreach_events.php" target="_self" style="color: #3db166 ;">View All Events</a>
                   </div>
                   <div class="gdlr-core-event-item-holder clearfix">
-                     <style>
-                        .gdlr-core-event-item-thumbnail img {
-                        height: 200px;
-                        }
-                        .events-container {
-                        display: flex;
-                        flex-wrap: nowrap;
-                        gap: 20px;
-                        }
-                        .gdlr-core-event-item-list {
-                        flex: 1 1 30%; 
-                        box-sizing: border-box;
-                        }
-                     </style>
-                     <div class="events-container">
-                        <?php 
-                           $sql="select * from events order by id desc LIMIT 3";
-                           $res=mysqli_query($con,$sql);
-                           $i=1;
-                           while($row=mysqli_fetch_assoc($res)){
-                           ?>
-                        <div class="gdlr-core-event-item-list gdlr-core-style-grid gdlr-core-item-pdlr gdlr-core-column-20 gdlr-core-column-first clearfix">
-                           <div class="gdlr-core-event-item-thumbnail">
-                              <a  href="<?php echo 'event_detail.php?id=' . $row['id']; ?>"><img src="outreach_events/NMD2023_1.jpg" width="900" height="500" alt="" class="img-fluid img-thumbnail" /></a>
-                           </div>
-                           <div class="gdlr-core-event-item-content-wrap">
-                              <h3 class="gdlr-core-event-item-title"><a  href="<?php echo 'event_detail.php?id=' . $row['id']; ?>"><?php echo $row['title'] ?></a></h3>
-                              <div class="gdlr-core-event-item-info-wrap">
-                                 <span class="gdlr-core-event-item-info gdlr-core-type-time"><span class="gdlr-core-head"><i class="icon_clock_alt"></i></span><span class="gdlr-core-tail"><?php echo $row['date'] ?></span></span>
-                                 <span class="gdlr-core-event-item-info gdlr-core-type-location"><span class="gdlr-core-head"><i class="icon_pin_alt"></i></span><span class="gdlr-core-tail"><?php echo $row['venue'] ?></span></span>
-                              </div>
-                           </div>
-                        </div>
-                        <?php } ?>
-                     </div>
-                  </div>
+    <style>
+        .gdlr-core-event-item-thumbnail img {
+            height: 200px;
+        }
+        .events-container {
+            display: flex;
+            gap: 20px;
+            justify-content: flex-start;
+        }
+        .gdlr-core-event-item-list {
+            flex: 1 1 30%;
+            box-sizing: border-box;
+        }
+        .gdlr-core-event-item-placeholder {
+            flex: 1 1 30%;
+            box-sizing: border-box;
+            visibility: hidden;
+        }
+    </style>
+    <div class="events-container">
+        <?php 
+        $sql="select * from events where category='outreach_events_conferences' and status='1' order by id desc LIMIT 3";
+        $res=mysqli_query($con,$sql);
+        $i=0;
+        while($row=mysqli_fetch_assoc($res)){
+        $i++;
+        ?>
+        <div class="gdlr-core-event-item-list gdlr-core-style-grid gdlr-core-item-pdlr gdlr-core-column-20 gdlr-core-column-first clearfix">
+            <div class="gdlr-core-event-item-thumbnail">
+                <a href="<?php echo 'event_detail.php?id=' . $row['id']; ?>"><img src="outreach_events/NMD2023_1.jpg" width="900" height="500" alt="" class="img-fluid img-thumbnail" /></a>
+            </div>
+            <div class="gdlr-core-event-item-content-wrap">
+                <h3 class="gdlr-core-event-item-title"><a href="<?php echo 'event_detail.php?id=' . $row['id']; ?>"><?php echo $row['title'] ?></a></h3>
+                <div class="gdlr-core-event-item-info-wrap">
+                    <span class="gdlr-core-event-item-info gdlr-core-type-time"><span class="gdlr-core-head"><i class="icon_clock_alt"></i></span><span class="gdlr-core-tail"><?php echo $row['date'] ?></span></span>
+                    <span class="gdlr-core-event-item-info gdlr-core-type-location"><span class="gdlr-core-head"><i class="icon_pin_alt"></i></span><span class="gdlr-core-tail"><?php echo $row['venue'] ?></span></span>
+                </div>
+            </div>
+        </div>
+        <?php } ?>
+        <?php while($i < 3) { ?>
+        <div class="gdlr-core-event-item-placeholder"></div>
+        <?php $i++; } ?>
+    </div>
+</div>
+
                </div>
             </div>
          </div>

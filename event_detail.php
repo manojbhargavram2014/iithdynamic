@@ -96,6 +96,14 @@ if(isset($_GET['id']) && $_GET['id']!=''){
                               <li><strong>Date   :</strong>  <?php echo $row['date'] ?? 'TBA'; ?></li>
                               <li><strong>Venue   :</strong> <?php echo $row['venue'] ?? 'TBA'; ?></li>
                               <li><strong>Organized By   :</strong>  <?php echo $row['organizedby'] ?? 'TBA'; ?></li>
+                              <?php if (!empty($row['link'])): ?>
+                                 <li><strong>External Link   :</strong> <a href="<?php echo htmlspecialchars($row['link']); ?>" target="_blank">Click Here</a></li>
+                              <?php endif; ?>
+                              <?php if (!empty($row['file_link'])): ?>
+                                 <li><strong>Attachment   :</strong> <a href="<?php echo htmlspecialchars($row['file_link']); ?>" target="_blank">Download</a></li>
+                              <?php endif; ?>
+                              
+
                            </ul>
 
                         </div>

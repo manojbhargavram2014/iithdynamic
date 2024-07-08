@@ -13,6 +13,7 @@ $date='';
 $speaker='';
 $organizedby=''; 
 $link=''; 
+$file_link=''; 
 $image_required='required';
 if(isset($_GET['id']) && $_GET['id']!=''){
 	$id=get_safe_value($con,$_GET['id']);
@@ -31,6 +32,7 @@ if(isset($_GET['id']) && $_GET['id']!=''){
 		$speaker=$row['speaker'];
 		$organizedby=$row['organizedby'];
 		$link=$row['link'];
+		$file_link=$row['file_link'];
 	}else{
 		header('location:events.php');
 		die();
@@ -47,6 +49,7 @@ if(isset($_POST['submit'])){
 	$speaker=get_safe_value($con,$_POST['speaker']);
 	$organizedby=get_safe_value($con,$_POST['organizedby']);
 	$link=get_safe_value($con,$_POST['link']);
+	$file_link=get_safe_value($con,$_POST['file_link']);
 	
 	if(isset($_GET['id']) && $_GET['id']==0){
 		if($_FILES['image']['type']!='image/png' && $_FILES['image']['type']!='image/jpg' && $_FILES['image']['type']!='image/jpeg'){
@@ -72,14 +75,14 @@ if(isset($_POST['submit'])){
 			if($_FILES['image']['name']!=''){
 				$image=rand(111111111,999999999).'_'.$_FILES['image']['name'];
 				move_uploaded_file($_FILES['image']['tmp_name'], $target_dir . $image);
-				mysqli_query($con, "UPDATE events SET title='$title', shortNote='$shortNote', body='$body', category='$category', image='$image', venue='$venue', date='$date', speaker='$speaker', organizedby='$organizedby' , link='$link'WHERE id='$id'");
+				mysqli_query($con, "UPDATE events SET title='$title', shortNote='$shortNote', body='$body', category='$category', image='$image', venue='$venue', date='$date', speaker='$speaker', organizedby='$organizedby' , link='$link', file_link='$file_link' WHERE id='$id'");
 			}else{
-				mysqli_query($con, "UPDATE events SET title='$title', shortNote='$shortNote', body='$body', category='$category', venue='$venue', date='$date', speaker='$speaker', organizedby='$organizedby', link='$link' WHERE id='$id'");
+				mysqli_query($con, "UPDATE events SET title='$title', shortNote='$shortNote', body='$body', category='$category', venue='$venue', date='$date', speaker='$speaker', organizedby='$organizedby', link='$link',file_link='$file_link' WHERE id='$id'");
 			}
 		}else{
 			$image=rand(111111111,999999999).'_'.$_FILES['image']['name'];
 			move_uploaded_file($_FILES['image']['tmp_name'], $target_dir . $image);
-			mysqli_query($con, "INSERT INTO events (title, shortNote, body, category, image, status, venue, date, speaker, organizedby, link) VALUES ('$title', '$shortNote', '$body', '$category', '$image', '1', '$venue', '$date', '$speaker','$organizedby', '$link')");
+			mysqli_query($con, "INSERT INTO events (title, shortNote, body, category, image, status, venue, date, speaker, organizedby, link) VALUES ('$title', '$shortNote', '$body', '$category', '$image', '1', '$venue', '$date', '$speaker','$organizedby', '$link', '$file_link')");
 		}
 		header('location:events.php');
 		die();
@@ -157,6 +160,10 @@ if(isset($_POST['submit'])){
 								<div class="form-group">
 									<label for="link" class=" form-control-label">External Link / Url</label>
 									<input type="url" name="link" placeholder="Enter Link / Url" class="form-control" value="<?php echo $link?>">
+								</div>
+								<div class="form-group">
+									<label for="file_link" class=" form-control-label">Attachment File Link</label>
+									<input type="url" name="file_link" placeholder="attachment Link / Url" class="form-control" value="<?php echo $file_link?>">
 								</div>
 							   <button id="payment-button" name="submit" type="submit" class="btn btn-lg btn-info btn-block">
 							   <span id="payment-button-amount">Submit</span>

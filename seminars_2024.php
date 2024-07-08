@@ -38,7 +38,7 @@
                               <!--start-->
                               <?php 
                                  $i=1;
-                                 $sql = "SELECT * FROM events WHERE category = 'seminars' ORDER BY id DESC";
+                                 $sql = "SELECT * FROM events WHERE category = 'seminars' AND status='1' ORDER BY id DESC";
 
                                  $res=mysqli_query($con,$sql);
                                  while($row=mysqli_fetch_assoc($res)){?>
